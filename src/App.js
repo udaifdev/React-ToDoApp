@@ -19,6 +19,10 @@ function App() {
     setDay(getCurrentDay()); // Set the day state with the current day name
   }, []);
 
+  const funDlt = () => {
+    alert('Are You Sure To Delete')
+  }
+
   return (
     <div className="app">
       {/* Heading of the app */}
@@ -73,7 +77,7 @@ function App() {
 
               {/* Button to delete the item from the list */}
               <div className="right">
-                <i onClick={() => set_ToDos(to_Dos.filter((obj2) => obj2.id !== obj.id))} className="fas fa-times"> </i>
+                <i onClick={() =>{ funDlt(); set_ToDos(to_Dos.filter((obj2) => obj2.id !== obj.id))}} className="fas fa-times"> </i>
               </div>
             </div>
           )
