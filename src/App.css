@@ -1,12 +1,15 @@
+/* General reset */
 * {
   margin: 0;
   padding: 0;
 }
 
+/* Background color for the app */
 body {
   background-color: #040605;
 }
 
+/* Main app container positioning */
 .app {
   position: absolute;
   top: 10%;
@@ -14,29 +17,24 @@ body {
   transform: translate(-50%, -10%);
 }
 
+/* Heading styles */
 .app .mainHeading h1 {
   text-align: center;
 }
 
-.app h1,
-h2 {
+.app h1, h2 {
   color: white;
 }
 
+/* Input container styling */
 .app .input {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.app .input {
   margin-top: 0.8em;
   width: 20em;
   height: 2em;
   background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-radius: 6px;
   padding: 5px;
 }
@@ -44,10 +42,11 @@ h2 {
 .app .input input {
   width: 100%;
   height: 1.6em;
-  border-color: transparent;
-  outline-color: transparent;
+  border: none;
+  outline: none;
 }
 
+/* Plus icon styling */
 .app i {
   cursor: pointer;
   font-size: larger;
@@ -55,12 +54,15 @@ h2 {
   color: rgb(0, 0, 0);
   margin-right: 5px;
 }
+
+/* Todo list styling */
 .app .todos {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 .app .todos .todo {
   margin-top: 0.8em;
   width: 20em;
@@ -72,24 +74,37 @@ h2 {
   border-radius: 6px;
   padding: 5px;
 }
+
 .app .todos .todo .left {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
+/* Text styling inside todo items */
 .app .todos .todo .left p {
   margin-left: 3px;
   font-size: medium;
   font-weight: 700;
-  font-style: normal;
   color: rgb(20, 19, 19);
 }
 
- 
-  
-  /* Style for done items (line-through) */
-  .done {
+/* Styling for completed todos */
+.done {
   text-decoration: line-through;
-  color: black; /* Dark color for the line-through */
+  color: black;
 }
+
+/* Drop-down animation */
+@keyframes dropDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+ 
